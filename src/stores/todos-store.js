@@ -31,6 +31,4 @@ export const useTodosStore = defineStore("todos", {
       this.getTodos();
     },
   },
-
-  getters: {},
 });
