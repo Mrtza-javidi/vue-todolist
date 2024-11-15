@@ -1,4 +1,4 @@
-import axios, { AxiosHeaders } from "axios";
+import axios from "axios";
 import { useToastStore } from "@/stores/toast-store";
 
 const axiosInstance = axios.create({
@@ -18,8 +18,8 @@ axiosInstance.interceptors.request.use(
 
 axiosInstance.interceptors.response.use(
   (response) => {
-    if (response.data && response.data.data) {
-      return response.data.data;
+    if (response.data) {
+      return response.data;
     }
     return Promise.reject(new Error("No data found in the response."));
   },
