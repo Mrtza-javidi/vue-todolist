@@ -1,5 +1,20 @@
-# Vue 3 + Vite
+# Todo App - Vue 3 & Vuetify 3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Overview
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+A simple Todo application built with Vue 3, Vuetify 3, and Pinia for state management. This app allows users to manage tasks by adding, editing, and deleting items. The UI is designed with Vuetify 3, ensuring responsiveness and a sleek, material design.
+
+### Key Features
+
+- **Add New Todo**: Users can add new tasks with a title and status.
+- **Edit Todo**: Modify existing todos with updated details.
+- **Delete Todo**: Remove todos from the list.
+- **Data Persistence**: Todos are fetched and updated via a centralized store using Pinia.
+- **Responsive UI**: Mobile-first design using Vuetify 3 components for a smooth user experience.
+
+## Tech Stack
+
+- **Frontend**: Vue 3, Vuetify 3, Vue Router
+- **State Management**: Pinia
+- **Date Handling**: JavaScript's `Date` API and custom date formatting
+- **Build Tool**: Vite (for fast development and bundling)
