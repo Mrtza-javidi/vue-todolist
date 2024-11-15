@@ -1,18 +1,31 @@
 import { createApp } from "vue";
+import router from "./router";
 import { createPinia } from "pinia";
+// Vuetify
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import "@mdi/font/css/materialdesignicons.css";
 
 import App from "./App.vue";
-// import router from "@/router/index.js";
-import { registerBaseComponents } from "@/plugins/global-reusable-components";
-import { registerLayouts } from "@/plugins/global-reusable-components";
+
+const vuetify = createVuetify({
+  components,
+  directives,
+  icons: {
+    defaultSet: "mdi",
+  },
+});
 
 const app = createApp(App);
 const pinia = createPinia();
 
-registerBaseComponents(app);
-registerLayouts(app);
+// registerBaseComponents(app);
+// registerLayouts(app);
 
 app.use(pinia);
 app.use(router);
+app.use(vuetify);
 
 app.mount("#app");
